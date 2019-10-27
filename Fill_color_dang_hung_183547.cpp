@@ -1,6 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+//tu tuong: dung thuat toan tham lam de to mau cac dinh cua do thi:
+//cach sap xep thu tu to mau: theo bac cua dinh: cao ->thap
 using namespace std;
 ofstream outfile;
 struct node {
