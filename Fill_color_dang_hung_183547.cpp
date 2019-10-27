@@ -56,73 +56,73 @@ void change_to_textcolor(int a,int i)//chuyen doi mau dang int sang char
 	outfile <<"\n  "<< i<< " [fillcolor = ";
 	switch(a){
 		case 1: cout<<"Red, ";
-				outfile<<"Red, ";
+				outfile<<"red, ";
 				break;
-		case 2: cout<<"Black, ";
-				outfile<<"Black, ";
+		case 2: cout<<"Green, ";
+				outfile<<"green, ";
 				break;
 		case 3: cout<<"Yellow, ";
-				outfile<<"Yellow, ";
+				outfile<<"yellow, ";
 				break;
-		case 4: cout<<"Orange, ";
-				outfile<<"Orange, ";
+		case 5: cout<<"Orange, ";
+				outfile<<"orange, ";
 				break;
-		case 5: cout<<"Blue, ";
-				outfile<<"Blue, ";
+		case 4: cout<<"Blue, ";
+				outfile<<"blue, ";
 				break;
 		case 6: cout<<"White, ";
-				outfile<<"White, ";
+				outfile<<"white, ";
 				break;
-		case 7: cout<<"Brown, ";
-				outfile<<"Brown, ";
+		case 7: cout<<"SkyBlue1, ";
+				outfile<<"skyblue1, ";
 				break;
-		case 8: cout<<"Green, ";
-				outfile<<"Green, ";
+		case 8: cout<<"Black, ";
+				outfile<<"black, ";
 				break;
 		case 9: cout<<"Pink, ";
-				outfile<<"Pink, ";
+				outfile<<"pink, ";
 				break;
 		case 10: cout<<"LightGrey, ";
-				outfile<<"LightGrey, ";
+				outfile<<"lightgrey, ";
 				break;
 		case 11: cout<<"YellowGreen, ";
-				outfile<<"YellowGreen,";
+				outfile<<"yellowgreen,";
 				break;
 		case 12: cout<<"SandyBrown, ";
-				outfile<<"SandyBrown, ";
+				outfile<<"sandybrown, ";
 				break;
 		case 13: cout<<"Snow, ";
-				outfile<<"Snow, ";
+				outfile<<"snow, ";
 				break;
-		case 14: cout<<"SkyBlue1, ";
-				outfile<<"SkyBlue1, ";
+		case 14: cout<<"Brown, ";
+				outfile<<"brown, ";
 				break;
 		case 15: cout<<"SkyBlue2, ";
-				outfile<<"SkyBlue2, ";
+				outfile<<"skyblue2, ";
 				break;
 		case 16: cout<<"SkyBlue3, ";
-				outfile<<"SkyBlue3, ";
+				outfile<<"skyblue3, ";
 				break;
 		case 17: cout<<"Chocolate, ";
-				outfile<<"Chocolate, ";
+				outfile<<"chocolate, ";
 				break;
 		case 18: cout<<"Purple, ";
-				outfile<<"Purple, ";
+				outfile<<"purple, ";
 				break;
 		case 19: cout<<"DarkGrey, ";
-				outfile<<"DarkGrey, ";
+				outfile<<"darkgrey, ";
 				break;
 		case 20: cout<<"LightGreen, ";
-				outfile<<"LightGreen, ";
+				outfile<<"lightgreen, ";
 				break;
 	}
-	outfile <<" style = filled;]";
+	outfile <<"style=filled;]";
 }
 void Print(int Filled[])
 {
-	outfile<< "\ngraph do thi\n{";
+	outfile<< "\ngraph dothi\n{";
 	for(int i=1;i<=n;i++){
-		cout<<"\n\t"<< i<< " [fillcolor = ";
+		cout<<"\n\t"<< i<< " [fillcolor=";
 		change_to_textcolor(Filled[i],i);
 		cout<<" style = filled;]";
 	}
@@ -167,7 +167,7 @@ int main ()
 	for(int i=0;i<n;i++){
 		Color(Sorting[i],Node,Filled,FreeColor);
 	}
-	cout<< endl<< "graph do thi"<<endl<<"{";
+	cout<< endl<< "graph dothi"<<endl<<"{";
 	Print(Filled);
 	outfile<< "\n\n";
 	for(int i=0;i<m;i++){
