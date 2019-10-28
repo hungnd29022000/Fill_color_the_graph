@@ -8,7 +8,7 @@ struct node {
 	int bac=0;//bac cua dinh
 	vector<int>DK;
 };
-int Max=0;//tim bac lon nhat
+int Max=0;
 int n,m; //n la dinh m la canh
 int next=0;
 int maxi=0;//tim so mau da su dung de to
@@ -35,12 +35,12 @@ void Color(int u,node Node[],int Filled[],int FreeColor[]){//to mau dinh u
 	}
 	for(int i=0;i<Node[u].bac;i++){
 		if(Filled[Node[u].DK.at(i)]!=0){
-			FreeColor[Filled[Node[u].DK.at(i)]]=0;//gan lai tat ca cac mau deu free co the to
+			FreeColor[Filled[Node[u].DK.at(i)]]=0;//gan lai tat ca cac mau deu free 
 		}
 	}
 }
-void Sorting_Node(node Node[],int Filled[],int FreeColor[] ){
-    while(Max>=0){//tim kiem nhung dinh co bac giam dan gan vao mang  den khi max<0 thi dung
+void Sorting_Node(node Node[],int Filled[],int FreeColor[] ){ //to mau cac dinh 
+    while(Max>=0){
         for(int i=1;i<=n;i++){
             if(Node[i].bac==Max){
 				Color(i,Node,Filled,FreeColor);
@@ -118,6 +118,7 @@ void change_to_textcolor(int a,int i)//chuyen doi mau dang int sang char
 }
 void Print(int Filled[])
 {
+	cout<< endl<< "graph dothi"<<endl<<"{";
 	outfile<< "\ngraph dothi\n{";
 	for(int i=1;i<=n;i++){
 		cout<<"\n "<< i<< " [fillcolor=";
@@ -158,17 +159,16 @@ int main ()
 	int FreeColor[20]={0};//mang luu cac mau tu 1->20 dung de to mau cac dinh
 	cout<<endl;
 	Sorting_Node(Node,Filled,FreeColor);
-	cout<< endl<< "graph dothi"<<endl<<"{";
-	{
+		{
 		Print(Filled);
 		outfile<< "\n\n";
 		for(int i=0;i<m;i++){
-			outfile<<"\n  "<<out_to_file[0][i]<<" -- "<<out_to_file[1][i]<<";";
-			cout<<"\n  "<<out_to_file[0][i]<<" -- "<<out_to_file[1][i]<<";";
-		}//xuat lai cac canh ra file
+				outfile<<"\n  "<<out_to_file[0][i]<<" -- "<<out_to_file[1][i]<<";";
+				cout<<"\n  "<<out_to_file[0][i]<<" -- "<<out_to_file[1][i]<<";";
+			}//xuat lai cac canh ra file
 		outfile<< "\n}";
 		cout<<"\n}";
-	}
+		}
 	cout<< "\nSo mau khac nhau da su dung de to la: "<<maxi;
 	return 0;
 }
