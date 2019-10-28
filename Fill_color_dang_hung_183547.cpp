@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
-//tu tuong: dung thuat toan tham lam de to mau cac dinh cua do thi:
+//tu tuong: dung thuat toan tham lam de to mau cac dinh
 using namespace std;
 ofstream outfile;//ghi file 
 ifstream infile;//doc file
