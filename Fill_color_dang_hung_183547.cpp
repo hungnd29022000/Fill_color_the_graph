@@ -24,13 +24,16 @@ void Color(int u,node Node[],int Filled[],int FreeColor[]){//to mau dinh u
 			FreeColor[Filled[Node[u].DK.at(i)]]=1;//mau i da bi dinh v to
 		}
 	}
-	for(int i=1;i<20;i++)
+	for(int i=1;i<=20;i++)
 	{//tim mau nho nhat chua bi to thi to cho dinh u
 		if(FreeColor[i]==0){
 			Filled[u]=i;
 			if(i>maxi)
 				maxi=i;//tim so mau nhieu nhat da to
 			break;
+		}
+		if(i==20&&FreeColor[i]==1){
+			cout<< "Khong du mau de to!! Toi da 20 mau\nThay doi ham change_to_color de them nhieu mau hon va tang kich thuoc mang FreeColor ";
 		}
 	}
 	for(int i=0;i<Node[u].bac;i++){
