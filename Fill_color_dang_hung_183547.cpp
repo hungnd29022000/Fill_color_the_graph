@@ -2,14 +2,14 @@
 #include <vector>
 #include <fstream>
 //tu tuong: dung thuat toan tham lam de to mau cac dinh cua do thi:
-//cach sap xep thu tu to mau: theo bac cua dinh: cao ->thap
 using namespace std;
-ofstream outfile;
+ofstream outfile;//ghi file 
+ifstream infile;//doc file
 struct node {
 	int bac=0;//bac cua dinh
 	vector<int>DK;
 };
-int Max=0;//tim bac lon nhat
+int Max=0; 
 int n,m; //n la dinh m la canh
 int next=0;
 int maxi=0;//tim so mau da su dung de to
@@ -20,7 +20,7 @@ int Test(int u){
 		return u;
 }
 void Sorting_Node(node Node[],int Sorting[]){
-    while(Max>=0){//tim kiem nhung dinh co bac giam dan gan vao mang  den khi max<0 thi dung
+    while(Max>=0){
         for(int i=1;i<=n;i++){
             if(Node[i].bac==Max){
 				Sorting[next]=i;//i la cac dinh
@@ -130,7 +130,6 @@ void Print(int Filled[])
 }
 int main ()
 {
-	ifstream infile;//doc file
 	infile.open ("dothi.txt");
 	outfile.open("tomaudothi.dot");
 	infile >> m;
