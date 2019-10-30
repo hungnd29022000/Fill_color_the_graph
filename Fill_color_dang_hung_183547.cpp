@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include <stdlib.h>
 using namespace std;
 ofstream outfile;
 ifstream infile;//doc file
@@ -34,6 +35,7 @@ void Color(int u,node Node[],int Filled[],int FreeColor[]){//to mau dinh u
 		}
 		if(i==20&&FreeColor[i]==1){
 			cout<< "Khong du mau de to!! Toi da 20 mau\nThay doi ham change_to_color de them nhieu mau hon va tang kich thuoc mang FreeColor ";
+			exit(0);
 		}
 	}
 	for(int i=0;i<Node[u].bac;i++){
