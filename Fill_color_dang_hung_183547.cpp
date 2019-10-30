@@ -175,6 +175,7 @@ int main ()
 		cout<<"\n}";
 		}
 	cout<< "\nSo mau khac nhau da su dung de to la: "<<maxi;
+	cout<< "DU LIEU RA DA DUOC IN VAO FILE: "tomaudothi.dot"";
 	return 0;
 }
 
