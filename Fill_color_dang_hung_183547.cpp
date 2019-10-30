@@ -40,11 +40,11 @@ void Color(int u,node Node[],int Filled[],int FreeColor[]){//to mau dinh u
 	}
 	for(int i=0;i<Node[u].bac;i++){
 		if(Filled[Node[u].DK.at(i)]!=0){
-			FreeColor[Filled[Node[u].DK.at(i)]]=0;//gan lai tat ca cac mau deu free 
+			FreeColor[Filled[Node[u].DK.at(i)]]=0;//gan lai tat ca cac mau deu free
 		}
 	}
 }
-void Sorting_Node(node Node[],int Filled[],int FreeColor[] ){ //to mau cac dinh 
+void Sorting_Node(node Node[],int Filled[],int FreeColor[] ){ //to mau cac dinh
     while(Max>=0){
         for(int i=1;i<=n;i++){
             if(Node[i].bac==Max){
@@ -175,7 +175,6 @@ int main ()
 		cout<<"\n}";
 		}
 	cout<< "\nSo mau khac nhau da su dung de to la: "<<maxi;
-	cout<< "DU LIEU RA DA DUOC IN VAO FILE: "tomaudothi.dot"";
+	cout<<endl<<endl<< "LUU Y: \t\t\t********DU LIEU RA DA DUOC IN VAO FILE: tomaudothi.dot ";
 	return 0;
 }
-
